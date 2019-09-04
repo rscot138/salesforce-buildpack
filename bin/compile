@@ -161,6 +161,7 @@ then
     # setup argument flag for package definition, if set in sfdx.yaml
     def_file_arg=""
     if [ ! "$package_def" == "" ];
+    then
       def_file_arg="--definitionFile $package_def"
     fi
     
