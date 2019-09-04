@@ -162,7 +162,7 @@ then
     def_file_arg=""
     if [ ! "$package_scratch_def" == "" ];
     then
-      def_file_arg="-f $package_scratch_def"
+      def_file_arg="-f $BUILD_DIR/$package_scratch_def"
     fi
     
     log "Creating new package version (this may take awhile) ..."
