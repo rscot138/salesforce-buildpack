@@ -169,6 +169,7 @@ then
 
     # create package version
     CMD="sfdx force:package:version:create --package $SFDX_PACKAGE_ID --wait 100 --installationkeybypass --json $def_file_arg | jq -r .result.SubscriberPackageVersionId"
+    debug "CMD: $CMD"
     SFDX_PACKAGE_VERSION_ID=$(eval $CMD)
     debug "SFDX_PACKAGE_VERSION_ID: $SFDX_PACKAGE_VERSION_ID"
 
