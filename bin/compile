@@ -106,7 +106,7 @@ debug "delete-scratch-org: $delete_scratch_org"
 debug "show-scratch-org-url: $show_scratch_org_url"
 debug "open-path: $open_path"
 debug "data-plans: $data_plans"
-debug "package-scratch-def: $package_def"
+debug "package-scratch-def: $package_scratch_def"
 
 # Set path for Dev Hub auth file
 devHubAuthFile=$BUILD_DIR/$vendorDir/sfdxurl
@@ -160,9 +160,9 @@ then
     
     # setup argument flag for package definition, if set in sfdx.yaml
     def_file_arg=""
-    if [ ! "$package_def" == "" ];
+    if [ ! "$package_scratch_def" == "" ];
     then
-      def_file_arg="--definitionFile $package_def"
+      def_file_arg="--definitionFile $package_scratch_def"
     fi
     
     log "Creating new package version (this may take awhile) ..."
